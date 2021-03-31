@@ -6,7 +6,7 @@ Download the example and use Visual Studio 2019 to open the project.
 
 ## Client-side resources and bundling
 
-This project uses [NPM](http://npmjs.com/) and [Gulp.js](https://gulpjs.com/) to install client-side libraries. All required scripts and CSS files will be automatically installed and packaged into the resulted bundle during the project first build.
+This project uses [NPM](http://npmjs.com/) and [Gulp.js](https://gulpjs.com/) to install client-side libraries. The project restores NPM packages before the first build. Then, Gulp bundles required scripts and CSS files into the resulting package during the first and every next build. 
 
 The resulted bundles will be located in the `wwwroot` folder:
 * `css/vendor.css` - a file with all CSS styles.
@@ -17,10 +17,15 @@ The default bundle includes jQuery, Bootstrap, and DevExtreme.
 
 ### Add more 3rd-party libraries for additional features/components 
 
-The main logic is located in the the `gulpfile.js` file at the root application level. The file contains two tasks for copying resources from NPM to the project:
+The main logic is located in the the `gulpfile.js` file at the root application level. The file contains two tasks:
 
-* `add-resouces` -  adds fonts\icons, "JS" files located in the `scripts` array and CSS located in the "styles" array
-* `clean` - removes all previously created files (`vendor.js` and `vendor.css`) and folders (`icons` and `fonts`)
+* the `add-resouces` task  
+
+    * copies JavaScript files located in the `scripts` array and addes them to `vendor.js`. The script bundle is moved to   `wwwroot\scripts`
+    * copies the CSS styles located in the `styles` array and merges them into the `styles.css` bundle. Then, this bundle is moved to `wwwroot\styles`
+    * copies DevExtreme `fonts` and `icons` folders from NPM  to `wwwroot\styles`
+
+*  the `clean` task removes all previously created files (`vendor.js` and `vendor.css`) and folders (`icons` and `fonts`)
 
 If you need to include more features, you can uncomment one of the following sections:
 
