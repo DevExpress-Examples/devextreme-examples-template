@@ -10,7 +10,7 @@ This project uses [NPM](http://npmjs.com/) and [Gulp.js](https://gulpjs.com/) to
 
 The resulted bundles will be located in the `wwwroot` folder:
 * `css/vendor.css` - a file with all CSS styles.
-* `css/icons` and `css/fonts` - folders that contains fonts and icons for DevExtreme themes.
+* `css/icons` and `css/fonts` - folders that contain fonts and icons for DevExtreme themes.
 * `js/vendor.js` - a file that contains all scripts.
 
 The default bundle includes jQuery, Bootstrap, and DevExtreme.
@@ -21,8 +21,8 @@ The main logic is located in the the `gulpfile.js` file at the root application 
 
 * the `add-resouces` task  
 
-    * copies JavaScript files located in the `scripts` array and addes them to `vendor.js`. The script bundle is moved to   `wwwroot\scripts`
-    * copies the CSS styles located in the `styles` array and merges them into the `styles.css` bundle. Then, this bundle is moved to `wwwroot\styles`
+    * copies JavaScript files located in the `scripts` array and adds them to `vendor.js`. The script bundle is moved to `wwwroot\scripts`.
+    * copies CSS styles located in the `styles` array and merges them into the `styles.css` bundle. Then, this bundle is moved to `wwwroot\styles`
     * copies DevExtreme `fonts` and `icons` folders from NPM  to `wwwroot\styles`
 
 *  the `clean` task removes all previously created files (`vendor.js` and `vendor.css`) and folders (`icons` and `fonts`)
@@ -47,8 +47,7 @@ Use the Visual Studio `Run (F5)` command to run the project.
 
 ## Further help
 
-You can learn more about the ASP.NET Core component syntax and syntax in our documentation: [Concepts](https://docs.devexpress.com/AspNetCore/400574/devextreme-based-controls/concepts/razor-syntax)
-
+You can learn more about the ASP.NET Core components' syntax in our documentation: [Concepts](https://docs.devexpress.com/AspNetCore/400574/devextreme-based-controls/concepts/razor-syntax)
 The client-side API is based on jQuery [jQuery documentation](https://api.jquery.com/) and described in the following topics: 
 * [Get and Set Properties](https://js.devexpress.com/DevExtreme/Guide/jQuery_Components/Component_Configuration_Syntax/#Get_and_Set_Properties)
 * [Call Methods](https://js.devexpress.com/DevExtreme/Guide/jQuery_Components/Component_Configuration_Syntax/#Call_Methods)
