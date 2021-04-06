@@ -1,4 +1,4 @@
 {
-    "port": 6000,
+    "port": 5050,
     "startPath": "src/index.html"
 }
