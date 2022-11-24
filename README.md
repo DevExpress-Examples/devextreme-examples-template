@@ -22,7 +22,7 @@ Then, add implementation details (steps, code snippets, and other technical info
 - **React**
     - [App.js](React/src/App.js)
 - **NetCore**    
-    - [Index.cshtml](ASP.NET Core/SampleApp/Views/Home/Index.cshtml)
+    - [Index.cshtml](ASP.NET_Core/SampleApp/Views/Home/Index.cshtml)
 
 ## Documentation
 
