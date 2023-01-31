@@ -6,12 +6,13 @@
     "lite": "lite-server -c ./bs-config.json"
   },
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "htmlhint": "^0.11.0",
+    "eslint": "^8.33.0",
+    "htmlhint": "^1.1.4",
     "lite-server": "^2.5.4"
   },
   "dependencies": {
-    "devextreme": "^20.2.5",
+    "browser-sync": "^2.27.6",
+    "devextreme": "^22.2.3",
     "jquery": "^3.5.1"
   }
 }
