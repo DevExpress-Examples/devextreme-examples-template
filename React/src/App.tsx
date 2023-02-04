@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useCallback, useState } from 'react';
 import './App.css';
+import 'devextreme/dist/css/dx.material.blue.light.compact.css';
+import Button from 'devextreme-react/button';
+import { ClickEvent } from 'devextreme/ui/button';
 
 function App() {
+  var [count, setCount] = useState<number>(0);
+  const clickHandler = useCallback((e: ClickEvent) => {
+    setCount(prev=>prev + 1);
+  }, [setCount])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Button text={`Click count: ${count}`} onClick={clickHandler} />
     </div>
   );
 }
