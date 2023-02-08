@@ -7,7 +7,7 @@
 
 This is the repository template for creating new examples. 
 
-Use **_Product_ for DevExtreme - _Task_* template for a title. 
+Use **_Product_ for DevExtreme - _Task_** template for a title. 
 
 Describe the solved task in this section.
 
