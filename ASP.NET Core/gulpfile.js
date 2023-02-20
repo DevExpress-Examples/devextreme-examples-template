@@ -29,7 +29,7 @@ let defaultScripts = [
     ganttScript = ["node_modules/devexpress-gantt/dist/dx-gantt.min.js"],
     dxtScripts = [
         "node_modules/devextreme/dist/js/dx.all.js",
-        "node_modules/devextreme/aspnet.js",
+        "node_modules/devextreme/dist/js/dx.aspnet.mvc.js",
         "node_modules/devextreme-aspnet-data/js/dx.aspnet.data.js"];
 
 
