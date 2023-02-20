@@ -23,11 +23,11 @@ Then, add implementation details (steps, code snippets, and other technical info
     - [app.component.html](Angular/src/app/app.component.html)
     - [app.component.ts](Angular/src/app/app.component.ts)
 - **Vue**
-    - [App.vue](Vue/src/App.vue)
+    - [Home.vue](Vue/src/components/HomeContent.vue)
 - **React**
-    - [App.js](React/src/App.js)
+    - [App.tsx](React/src/App.tsx)
 - **NetCore**    
-    - [Index.cshtml](ASP.NET_Core/SampleApp/Views/Home/Index.cshtml)
+    - [Index.cshtml](ASP.NET_Core/Views/Home/Index.cshtml)
 
 ## Documentation
 
