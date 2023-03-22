@@ -27,7 +27,7 @@ Then, add implementation details (steps, code snippets, and other technical info
 - **React**
     - [App.tsx](React/src/App.tsx)
 - **NetCore**    
-    - [Index.cshtml](ASP.NET_Core/Views/Home/Index.cshtml)
+    - [Index.cshtml](ASP.NET%20Core/Views/Home/Index.cshtml)
 
 ## Documentation
 
