@@ -1,0 +1,34 @@
+name: Lint
+
+concurrency:
+  group: wf-${{github.event.pull_request.number || github.sha}}-${{github.workflow}}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "[0-9][0-9].[0-9].[0-9]\+"
+
+jobs:
+  jQuery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - name: Get sources
+      uses: actions/checkout@v3
+      working-directory: jQuery
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      working-directory: jQuery
+
+    - name: Run npm install
+      working-directory: jQuery
+      run: npm install --no-audit --no-fund
+
+    - name: Lint jQuery
+      working-directory: jQuery
+      env:
+        DEBUG: eslint:cli-engine
+      run: npm run lint
