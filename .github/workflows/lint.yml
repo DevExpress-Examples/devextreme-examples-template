@@ -25,7 +25,7 @@ jobs:
       working-directory: Angular
       run: npm install --no-audit --no-fund
 
-    - name: Lint jQuery
+    - name: Lint Angular
       working-directory: Angular
       env:
         DEBUG: eslint:cli-engine
@@ -65,7 +65,7 @@ jobs:
       working-directory: React
       run: npm install --no-audit --no-fund
 
-    - name: Lint jQuery
+    - name: Lint React
       working-directory: React
       env:
         DEBUG: eslint:cli-engine
@@ -85,7 +85,7 @@ jobs:
       working-directory: Vue
       run: npm install --no-audit --no-fund
 
-    - name: Lint jQuery
+    - name: Lint Vue
       working-directory: Vue
       env:
         DEBUG: eslint:cli-engine
