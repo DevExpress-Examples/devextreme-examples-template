@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DxButtonModule } from "devextreme-angular/ui/button"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Service } from './app.service';
+
+import {
+  DxTabPanelModule,
+  DxDataGridModule,
+  DxToolbarModule,
+} from 'devextreme-angular';
+import { GridFormComponent } from './grid-form/grid-form.component';
+import { GridPopupComponent } from './grid-popup/grid-popup.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, GridFormComponent, GridPopupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxButtonModule
+    DxTabPanelModule,
+    DxDataGridModule,
+    DxToolbarModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [Service],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

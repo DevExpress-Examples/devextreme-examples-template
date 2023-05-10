@@ -1,3 +1,19 @@
-<div class="default-style">
-  <dx-button [text]="buttonText" (onClick)="onClick($event)"></dx-button>
-</div>
+<body class="dx-viewport">
+  <div class="demo-container">
+    <div class="demo-header">
+      <h3>DataGrid - Customize action buttons in editing Popup and Form</h3>
+    </div>
+    <dx-tab-panel id="tabPanel">
+      <dxi-item title="Popup">
+        <div *dxTemplate>
+          <grid-popup [employees]="employees"></grid-popup>
+        </div>
+      </dxi-item>
+      <dxi-item title="Form">
+        <div *dxTemplate>
+          <grid-form [employees]="employees"></grid-form>
+        </div>
+      </dxi-item>
+    </dx-tab-panel>
+  </div>
+</body>
