@@ -25,6 +25,10 @@ jobs:
       working-directory: Angular
       run: npm install --no-audit --no-fund
 
+    - name: TSC Angular
+      working-directory: Angular
+      run: npm run compile
+
     - name: Lint Angular
       working-directory: Angular
       env:
@@ -65,6 +69,10 @@ jobs:
       working-directory: React
       run: npm install --no-audit --no-fund
 
+    - name: TSC React
+      working-directory: React
+      run: npm run compile
+
     - name: Lint React
       working-directory: React
       env:
@@ -84,6 +92,10 @@ jobs:
     - name: Run npm install
       working-directory: Vue
       run: npm install --no-audit --no-fund
+
+    - name: TSC Vue
+      working-directory: Vue
+      run: npm run type-check
 
     - name: Lint Vue
       working-directory: Vue
