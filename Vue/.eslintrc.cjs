@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
   extends: [
-      'devextreme/angular'
+      'devextreme/vue'
   ]
 };
