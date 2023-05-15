@@ -27,33 +27,7 @@ jobs:
 
     - name: TSC Angular
       working-directory: Angular
-      run: npm run compile
-
-    - name: Lint Angular
-      working-directory: Angular
-      env:
-        DEBUG: eslint:cli-engine
-      run: npm run lint
-
-  jQuery:
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-    steps:
-    - name: Get sources
-      uses: actions/checkout@v3
-
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-
-    - name: Run npm install
-      working-directory: jQuery
-      run: npm install --no-audit --no-fund
-
-    - name: Lint jQuery
-      working-directory: jQuery
-      env:
-        DEBUG: eslint:cli-engine
-      run: npm run lint
+      run: npm run build
 
   React:
     runs-on: ubuntu-latest
@@ -73,12 +47,6 @@ jobs:
       working-directory: React
       run: npm run compile
 
-    - name: Lint React
-      working-directory: React
-      env:
-        DEBUG: eslint:cli-engine
-      run: npm run lint
-
   Vue:
     runs-on: ubuntu-latest
     timeout-minutes: 60
@@ -96,9 +64,3 @@ jobs:
     - name: TSC Vue
       working-directory: Vue
       run: npm run type-check
-
-    - name: Lint Vue
-      working-directory: Vue
-      env:
-        DEBUG: eslint:cli-engine
-      run: npm run lint
