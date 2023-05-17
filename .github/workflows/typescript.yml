@@ -59,7 +59,7 @@ jobs:
 
     - name: TSC React
       working-directory: React
-      run: npm run compile
+      run: npm run build
 
   Vue:
     runs-on: ubuntu-latest
