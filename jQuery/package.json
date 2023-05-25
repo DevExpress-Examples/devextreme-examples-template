@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run lite",
-    "lite": "lite-server -c ./bs-config.json"
+    "lite": "lite-server -c ./bs-config.json",
+    "lint-html": "prettier --check src/*",
+    "lint-js": "eslint --ext .js .",
+    "lint-css": "stylelint src/*.css",
+    "lint": "npm-run-all -p -c lint-js lint-css lint-html"
   },
   "devDependencies": {
     "eslint": "^8.33.0",
+    "eslint-config-devextreme": "1.1.0",
     "htmlhint": "^1.1.4",
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.8.8",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0"
   },
   "dependencies": {
     "browser-sync": "^2.27.6",
