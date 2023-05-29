@@ -7,10 +7,11 @@ module.exports = {
     env: {
       jquery: true
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     parserOptions: {
       sourceType: 'module',
-      'ecmaVersion': 2018
+      'ecmaVersion': 2018,
+      requireConfigFile: false,
     },
     globals: {
       System: true,
