@@ -30,5 +30,8 @@ module.exports = {
         'forbidExtraProps',
       ],
     },
+  }, {
+    files: ['*.test.tsx'],
+    extends: ['devextreme/jest']
   }]
 };
