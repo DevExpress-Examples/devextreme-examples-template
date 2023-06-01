@@ -5,17 +5,17 @@ module.exports = {
     files: ['*.js'],
     extends: ['devextreme/jquery'],
     env: {
-      jquery: true
+      jquery: true,
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
-      sourceType: 'module',
+      'sourceType': 'module',
       'ecmaVersion': 2018,
-      requireConfigFile: false,
+      'requireConfigFile': false,
     },
     globals: {
       System: true,
-      DevExpress: true
-    }
-  }]
+      DevExpress: true,
+    },
+  }],
 };
