@@ -10,7 +10,7 @@ function reportWebVitals(onPerfEntry?: ReportHandler): void {
       getFCP(onPerfEntry);
       getLCP(onPerfEntry);
       getTTFB(onPerfEntry);
-    }).catch((error) => console.log(error));
+    }).catch((error) => console.log(error)); // eslint-disable-line no-console
   }
 }
 
