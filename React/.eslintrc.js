@@ -8,7 +8,6 @@ module.exports = {
       browser: true,
       es6: true
     },
-    parser: 'babel-eslint',
     parserOptions: {
       project: './tsconfig.json',
       'createDefaultProgram': true,
@@ -30,5 +29,8 @@ module.exports = {
         'forbidExtraProps',
       ],
     },
+  }, {
+    files: ['*.test.tsx'],
+    extends: ['devextreme/jest']
   }]
 };

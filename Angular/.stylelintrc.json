@@ -1,3 +1,6 @@
 {
-    "extends": "devextreme/stylelintrc"
+    "extends": [
+        "eslint-config-devextreme/stylelintrc",
+        "stylelint-config-standard-scss"
+    ]
 }
