@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint-html": "prettier --check .",
     "lint-ts": "eslint --ext .ts .",
-    "lint-scss": "stylelint **/*.scss",
-    "lint": "npm-run-all -p -c lint-ts lint-scss lint-html"
+    "lint-css": "stylelint src/**/*.{css,scss} --allow-empty-input",
+    "lint": "npm-run-all -p -c lint-ts lint-css lint-html"
   },
   "private": true,
   "dependencies": {
