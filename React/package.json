@@ -23,7 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "lint-js": "eslint .",
+    "lint-css": "stylelint src/**/*.css --allow-empty-input",
+    "lint": "npm-run-all -p -c lint-js lint-css"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +50,9 @@
     "eslint-config-devextreme": "1.1.2",
     "eslint-plugin-no-only-tests": "2.6.0",
     "eslint-plugin-react": "7.31.10",
-    "eslint-plugin-react-perf": "^3.3.1"
+    "eslint-plugin-react-perf": "^3.3.1",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0"
   }
 }

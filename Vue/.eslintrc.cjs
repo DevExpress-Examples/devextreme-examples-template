@@ -3,7 +3,10 @@ module.exports = {
   extends: ['devextreme/spell-check'],
   overrides: [{
     files: ['*.ts', '*.vue'],
-    extends: ['devextreme/vue'],
+    extends: [
+      '@vue/eslint-config-typescript',
+      'devextreme/vue'
+    ],
     env: { es6: true },
     parserOptions: {
       project: './tsconfig.json',

@@ -6,7 +6,7 @@
     "lite": "lite-server -c ./bs-config.json",
     "lint-html": "prettier --check src/*",
     "lint-js": "eslint --ext .js .",
-    "lint-css": "stylelint src/*.css",
+    "lint-css": "stylelint src/**/*.css --allow-empty-input",
     "lint": "npm-run-all -p -c lint-js lint-css lint-html"
   },
   "devDependencies": {
