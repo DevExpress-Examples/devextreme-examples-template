@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run lite",
+    "build": "npm run lint",
     "lite": "lite-server -c ./bs-config.json",
     "lint-html": "prettier --check src/*",
     "lint-js": "eslint --ext .js .",
