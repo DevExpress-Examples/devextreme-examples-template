@@ -15,24 +15,22 @@ function Process-JavaScriptProjects {
             continue
         }
 
-        Write-Host "Processing folder: $folder"
+        Write-Host "`nProcessing folder: $folder"
         
         Set-Location $folder
 
         Write-Host "Running 'npm install' in $folder"
-        $installResult = & npm install
+        $installResult = & npm install -PassThru
         if ($LASTEXITCODE -ne 0) {
             Write-Error "npm install failed in $folder"
-            Set-Location ..
-            exit 1
+            $errorCode = 1
         }
 
         Write-Host "Running 'npm run build' in $folder"
-        $buildResult = & npm run build
+        $buildResult = & npm run build -PassThru
         if ($LASTEXITCODE -ne 0) {
             Write-Error "npm run build failed in $folder"
-            Set-Location ..
-            exit 1
+            $errorCode = 1
         }
 
         Set-Location ..
@@ -43,7 +41,7 @@ function Process-DotNetProjects {
     param (
         [string]$RootDirectory = "."
     )
-    Write-Host "Processing .NET Projects";
+    Write-Host "`nProcessing .NET Projects";
 
     $slnFiles = Get-ChildItem -Path $RootDirectory -Filter *.sln -Recurse -Depth 1
 
@@ -61,11 +59,15 @@ function Process-DotNetProjects {
             Write-Host "Build succeeded for $($slnFile.FullName)."
         } else {
             Write-Host "Build failed for $($slnFile.FullName)."
-            exit $LASTEXITCODE
+            errorCode = 1;
         }
     }
 } 
 
+$errorCode = 0;
+
 Write-Host "Version: $version"
 Process-JavaScriptProjects
 Process-DotNetProjects
+
+exit $errorCode
