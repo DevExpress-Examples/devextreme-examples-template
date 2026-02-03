@@ -1,3 +1,5 @@
+import _data from './data.js';
+
 $(() => {
   let count = 0;
   $('#btn').dxButton({
