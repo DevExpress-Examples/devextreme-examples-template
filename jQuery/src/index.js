@@ -1,7 +1,7 @@
-import _data from './data.js';
+import { count as initialCount } from './data.js';
 
 $(() => {
-  let count = 0;
+  let count = initialCount;
   $('#btn').dxButton({
     text: `Click count: ${count}`,
     onClick(e) {
