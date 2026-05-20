@@ -1,3 +1,8 @@
+import { licenseKey } from './devextreme-license';
+import config from 'devextreme/core/config';
+
+config({ licenseKey });
+
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
