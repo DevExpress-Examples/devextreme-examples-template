@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
+    "prebuild": "devextreme-license --non-modular --out src/devextreme-license.js --force",
     "build": "npm run lint",
     "lint-html": "prettier --check src/*",
     "lint-js": "eslint .",
