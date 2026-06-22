@@ -35,8 +35,8 @@
     "@angular/cli": "~21.2.11",
     "@angular/compiler-cli": "^21.2.13",
     "@types/jasmine": "~4.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.61.1",
+    "@typescript-eslint/parser": "^8.61.1",
     "eslint": "9.18.0",
     "eslint-config-devextreme": "1.1.9",
     "eslint-plugin-no-only-tests": "^3.1.0",
@@ -53,6 +53,6 @@
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-scss": "^5.0.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.49.0"
+    "typescript-eslint": "^8.61.1"
   }
 }
