@@ -1,0 +1,18 @@
+# Root EditorConfig for paths not covered by the framework-specific configs
+# (React, Vue, jQuery, .github, repository root). "ASP.NET Core" and "Angular"
+# keep their own configs with root = true.
+# Line endings are governed by .gitattributes (* text=auto eol=lf);
+# end_of_line here matches it so editors do not fight git.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
