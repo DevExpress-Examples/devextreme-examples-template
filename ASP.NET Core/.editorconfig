@@ -256,9 +256,6 @@ tab_width = 2
 [*.sh]
 end_of_line = lf
 
-[*.{bat,cmd,sln}]
-end_of_line = crlf
-
 [*.{*proj}]
 indent_size = 2
 tab_width = 2
