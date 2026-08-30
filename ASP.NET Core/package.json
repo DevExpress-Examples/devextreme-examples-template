@@ -2,6 +2,9 @@
   "version": "1.0.0",
   "name": "asp.net",
   "private": true,
+  "scripts": {
+    "start": "dotnet watch run"
+  },
   "dependencies": {
     "jquery": "3.7.1",
     "devextreme-dist": "26.1.3",
